@@ -1,0 +1,302 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a{
+  color: #090;
+}
+a:visited{color: #050;}
+.container{
+  margin: 20px auto;
+  border: 1px solid darkgreen;
+  min-width: 500px;
+  height: 500px;
+  max-width: 1000px;
+  display: flex;
+}
+
+nav{
+
+  background-color: rgba(0, 150, 0, 1);
+  color: white;
+
+}
+nav a{
+  color: white;
+  text-decoration: none;
+}
+nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  width: 50px;
+  
+}
+nav li{
+  line-height: 1.5rem;
+  height: 4rem;
+  border-bottom: 1px solid #eee;
+}
+nav li:hover{
+  background-color: rgb(1, 92, 31);
+}
+.bar1{
+  width: calc(50% - 50px);
+  background-color: lightgray;
+  overflow-y: scroll;
+}
+
+.bar1 input{
+  width: 70%;
+  height: 2rem;
+  color: #009600;
+  border-radius: 1rem;
+  align-self: center;
+  outline: none;
+}
+
+.search-bar{
+  padding: 1rem 2.5rem;
+  background: white  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+.bar1-header input::placeholder{
+  font-style: italic;
+}
+.material-icons {
+  color: black;
+  font-size: 24px;
+  font-family: 'Material Icons';
+  display: inline-block;
+  letter-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  line-height: 1;
+
+}
+nav  a .material-icons {
+  display: grid;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+}
+nav a.active{
+  background-color: #050
+}
+.chat-name {
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bar2{
+  width: 100%;
+}
+
+.header{
+  height: 4rem;
+  background-color: #009600;
+  display: flex;
+  justify-content: center;
+}
+.bar2 .header, .footer{
+  box-shadow: 0 0.5rem 3px lightgray;
+  background-color: rgb(250, 250, 250);
+  filter: drop-shadow(0 1px 1px lightgray);
+}
+h3{
+  text-align: center;
+  color: #050;
+  border-bottom: 2px double #050;
+}
+.header h3{
+  height: fit-content;
+  align-self: center;
+}
+.bar2-body{
+  height: calc(100% - 8rem);
+  overflow-y: scroll;
+  background-color: rgb(240, 240, 240);
+  padding: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bar2-footer{
+  height: 4rem;
+  box-shadow: 0 -0.5rem 5px lightgray;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.bar2-footer input{
+  width: 60%;
+
+}
+.chat-msg{
+  padding: 5px 15px;
+  background-color: rgba(210, 255, 210, 1);
+  border-radius: 5px;
+  display: block;
+  max-width: 350px;
+  width: fit-content;
+  overflow-wrap: break-word;
+  margin: 2px;
+  white-space: pre-line;
+  font-family: cursive, 'Courier New', Courier, monospace;
+}
+.right{
+  clear: right;
+  float: right;
+  background-color: rgba(210, 255, 210, 0.5);
+}
+.left{
+  clear: both;
+}
+.date-div{
+  font-size: smaller;
+  margin: 0 auto;
+  background-color: #eee;
+  width: fit-content;
+  color: #999;
+}
+.box{
+  height: 4rem;
+  border-bottom: 1px solid #090;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #555;
+  text-decoration: none;
+
+}
+a.box.active{
+  background-color: #090;
+  color: white;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+a.box:hover{
+  opacity: 0.5;
+}
+.dp-icon{
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%;
+  background-color: #aaa;
+  margin: 2px;
+}
+.profile{
+  padding: 10px; margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px auto;
+}
+.profile input, button, textarea{
+  margin: 5px;
+  padding: 5px;
+}
+
+.unread-count{
+  font-size: 12px;
+  background-color: #900;
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
+
+}
+.bar2-footer textarea{
+  width: 75%;
+  outline: none;
+  resize: none;
+  padding: 10px;
+  border: none;
+}
+.fly-send{
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  border-style: none;
+}
+.fly-send span.material-icons{
+  transform: rotate(-45deg);
+  color: #050;
+}
+.fly-send span.material-icons:hover{
+  transform: rotate(45deg);
+  color: #090;
+}
+
+.page{
+  text-align: center;
+  margin: auto;
+}
+.page img, .page img{
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+}
+.page p{
+  text-align: justify;
+  line-height: 1.5;
+  margin: 15px;
+
+}
+.bar1-blank input{
+  width: 80%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #050;
+  font-size: 16px;
+  color: #050;
+  margin: 10px;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+
+.info, .success, .warning, .error, .validation {
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.info {
+  color: #00529B;
+  background-color: #BDE5F8;
+  background-image: url('https://i.imgur.com/ilgqWuX.png');
+}
+.success {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  background-image: url('https://i.imgur.com/Q9BGTuy.png');
+}
+.warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('https://i.imgur.com/Z8q7ww7.png');
+}
+.error{
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
+.validation{
+  color: #D63301;
+  background-color: #FFCCBA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
