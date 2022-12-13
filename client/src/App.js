@@ -9,7 +9,7 @@ import Room from './components/Room';
 import {useState, useEffect} from 'react';
 import Welcome from './components/Welcome';
 import Help from './components/Help';
-const socket = socketIO.connect('http://localhost:4000');
+const socket = socketIO()//.connect(/* 'http://localhost:4000' */);
 
 function App() {
 

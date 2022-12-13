@@ -1,0 +1,20 @@
+{
+  "short_name": "ChatApp",
+  "name": "Social media Chatting App",
+  "icons": [
+    {
+      "src": "chatAppIcon.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "chatAppIcon.png",
+      "type": "image/png",
+      "sizes": "455x461"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
