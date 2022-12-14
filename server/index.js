@@ -11,13 +11,10 @@ server.listen(PORT, (req, res)=>{
 })
 
 app.use(express.static(path.resolve(__dirname, '../client/build')))
-app.use(cors);
+//app.use(cors);
 
 var socketio = require('socket.io');
-const io = socketio(server, {
-    cors: {origin: `http://localhost:3000`} 
-    }
-)
+const io = socketio(server)
 
 var onlineUsers = [];
 
@@ -30,7 +27,7 @@ io.on('connection', (socket)=>{
         'dp': faker.image.avatar()
         });
     io.emit('onlineUsersUpdate', onlineUsers);
-    console.log(onlineUsers);
+    //console.log(onlineUsers);
 
     //DM
     socket.on('dm', ({msg, rec})=>{
@@ -60,6 +57,5 @@ io.on('connection', (socket)=>{
     })
 })
 
-app.get('/', (req, res)=>{
-    res.json({'msg': "Wecome"})
-})
+app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, "build", "index.html")));
+app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, "../client/build", "index.html")));
